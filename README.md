@@ -6,7 +6,7 @@ I wanted to create a bookmarking tool for myself that I was completely sure only
 # Installation
 The bookmarking utility is a LAMP application that uses a MySQL database to save all the links. 
 
-You will need to have a server up and running with PHP and MySQL installed. Then you need to create tables using the booker.sql script that you can find in the MYSQL folder.
+You will need to have a server up and running with PHP and MySQL installed. Then you need to create tables using the booker.sql script that you can find in the <b>MYSQL</b> folder.
 
 After this you can create a user to access the table and add the user to the connection.php section in the <b>includes</b> folder.
 
