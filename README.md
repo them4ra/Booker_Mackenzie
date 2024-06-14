@@ -1,4 +1,4 @@
-# Booker_Mackenzie
+# Booker Mackenzie
 A very simple bookmarking utility where you can save links and arrange them with categories.
 
 I wanted to create a bookmarking tool for myself that I was completely sure only I have access to. I think the code is so simple pretty much anyone with a little knowledge of PHP will be able to audit it to make sure it's not collecting information or sending it anywhere.
