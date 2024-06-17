@@ -167,9 +167,6 @@ $sharelink = Null;
    </select>
    <br>
    <br>
-   <input type="checkbox" id="share" name="share" value="Null">
-    <label for="share"><font color="white"> Share link on m4ra.net</font></label><br>
-   <br>
    <input type="submit" value="Add Bookmark" />
  </form>
  </div>
