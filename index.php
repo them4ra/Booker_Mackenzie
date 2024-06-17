@@ -15,7 +15,7 @@ if (isset($_SESSION['logged_in_booker'])){
     $pass = $_POST['pass'];
 
     if (empty($user) or empty($pass)) {
-      $error = 'FUCK OFF';
+      $error = 'User or Password is missing, please give both.';
     } else {
       $query = $pdo->prepare("SELECT * FROM users WHERE username = ?");
 
@@ -32,7 +32,7 @@ if (isset($_SESSION['logged_in_booker'])){
         exit();
 
       } else {
-        $error = 'Go away asshole';
+        $error = 'Login credentials incorrect.';
 
       }
 
