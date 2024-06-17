@@ -26,7 +26,7 @@ if (isset($_SESSION['logged_in_booker'])) {
   if (isset($_POST['createtag'])){
     $newtagname = $_POST['createtag'];
     if (empty($newtagname)) {
-          $error = 'PUT A FUCKING TAG';
+          $error = 'Please put a category for the link!';
         /* Reload page */
         header('Location: booker.php');
         }
@@ -147,7 +147,7 @@ $sharelink = Null;
 
 <!-- Error goes here if there is one -->
   <?php if (isset($error)) { ?>
-      <p style="color:#ff0000;"><?php echo $error; ?></p>
+      <p style="color:#ff0000; font-size:20pt;"><?php echo $error; ?></p>
   <?php  } ?>
 
   <hr class="rounded">
@@ -190,7 +190,7 @@ $sharelink = Null;
 
  <hr class="rounded">
 
- <!-- End of Create a new tag  -->
+ <!-- End of Create a new category  -->
 
 <!-- Display links -->
 <h1>Most Recent Links</h1>
