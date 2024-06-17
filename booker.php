@@ -22,12 +22,11 @@ if (isset($_SESSION['logged_in_booker'])) {
 
   $tags = $query->fetchAll();
 
-
   /* If the New Tag form is set, create a new tag */
   if (isset($_POST['createtag'])){
     $newtagname = $_POST['createtag'];
     if (empty($newtagname)) {
-          $error = 'PUT A CATEGORY';
+          $error = 'PUT A FUCKING TAG';
         /* Reload page */
         header('Location: booker.php');
         }
@@ -84,7 +83,7 @@ $sharelink = Null;
 
     /* If either field in the form is empty, send error */
     if (empty($name) || empty($bookmarklink)) {
-      $error = 'PUT A LINK';
+      $error = 'PUT A FUCKING LINK';
     }
      /* If fields have content, send it to the links table */
       else {
@@ -129,10 +128,10 @@ $sharelink = Null;
     <link rel="stylesheet" href="style.css">
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
 
   </head>
 
@@ -193,7 +192,7 @@ $sharelink = Null;
 
  <!-- End of Create a new tag  -->
 
-<!-- Display lastest 50 links -->
+<!-- Display links -->
 <h1>Most Recent Links</h1>
 <p><a href="tags.php" style="color: red;">Browse by Category</a></p>
 <div class="center">
@@ -201,11 +200,20 @@ $sharelink = Null;
   <?php
   foreach ($links as $linkdata) {
     ?>
+
+    <!-- Display link -->
     <p>
     <a href="<?php echo $linkdata['link']; ?>" target="_blank">
       <?php echo $linkdata['name']; ?>
     </p>
     </a>
+
+    <!-- Display time link was saved -->
+    <p style="margin-top: -15px; color: grey;">
+    <?php echo date("d-m-Y H:i", $linkdata['thedate']);?>
+    </p>
+
+    <hr class="rounded">
 
     <?php
     /* If the post has no tags! */
