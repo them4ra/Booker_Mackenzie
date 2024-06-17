@@ -15,7 +15,7 @@ if (isset($_SESSION['logged_in_booker'])){
     $pass = $_POST['pass'];
 
     if (empty($user) or empty($pass)) {
-      $error = 'User or Password Incorrect';
+      $error = 'FUCK OFF';
     } else {
       $query = $pdo->prepare("SELECT * FROM users WHERE username = ?");
 
@@ -48,10 +48,10 @@ if (isset($_SESSION['logged_in_booker'])){
     <!-- Style sheet -->
     <link rel="stylesheet" href="style.css">
 
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/site.webmanifest">
 
 
   </head>
